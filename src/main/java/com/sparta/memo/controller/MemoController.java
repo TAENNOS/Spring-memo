@@ -42,4 +42,10 @@ public class MemoController {
 
         return responseList;
     }
+
+    @PutMapping("/memos/{id}")
+    public Long updateMEmo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto) {
+        // 해당 메모가 DB에 존재하는지 확인
+        if(memoList.containsKey(id)
+    }
 }
